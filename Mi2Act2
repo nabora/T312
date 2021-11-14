@@ -1,0 +1,49 @@
+package Package_1; 
+import java.util.Scanner;
+
+import Package_2.Vote;
+
+
+public class Main {
+
+	public static void main(String[] args){	
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter Fullname: ");
+		String fullName = scan.nextLine();
+		
+		System.out.println("Enter Age: ");
+		int x = scan.nextInt();
+		
+		System.out.println("Enter Voter ID: ");
+		int voterId = scan.nextInt();
+		System.out.println("\r");
+		scan.close();
+		
+		Vote myX = new Vote(x);
+	
+			System.out.println("[INFO]");
+			System.out.println("Name: "+fullName);
+			System.out.println("Age: "+myX.x);
+			System.out.println("Voter ID: "+voterId);
+		
+}
+	}
+  
+  package Package_2;
+
+public class Vote {
+
+		public int x;
+		
+		public Vote(int x) {
+			this.x = x;
+	
+		
+			if(x < 18) {
+				System.out.println("You are not eligible for voting\r");}
+			else if(x >= 18) {
+				System.out.println("You are eligible for voting! Have a great Day!\r");}
+	}
+		}
