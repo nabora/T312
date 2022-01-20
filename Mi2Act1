@@ -1,0 +1,60 @@
+import java.util.Scanner;
+public class EmployeesData {
+	
+	String name1, name2;
+	int id1, id2;
+	
+	
+	public EmployeesData(String name1, String name2) {
+		this.name1 = name1;
+		this.name2 = name2;
+	
+	}
+
+		public EmployeesData(int id1, int id2) {
+			this.id1 = id1;
+			this.id2 = id2;
+	}
+
+		public static void main(String args[]) {
+			
+			String name1, name2;
+			
+		Scanner scan = new Scanner(System.in);
+			
+			System.out.println("Input Employee #1 Name: ");
+			name1 = scan.nextLine();
+			
+			System.out.println("Input Employee #1 ID#: ");
+			int id1 = scan.nextInt();
+			
+			System.out.println("Input Employee #1 Salary: ");
+			int sal1 = scan.nextInt();
+			
+			System.out.println("\rInput Employee #2 Name: ");
+			name2 = scan.next();
+			
+			System.out.println("Input Employee #2 ID#: ");
+			int id2 = scan.nextInt();
+			
+			System.out.println("Input Employee #2 Salary: ");
+			int sal2 = scan.nextInt();
+			System.out.println("\r");
+			
+			int tax1 = sal1 - (sal1 * 10/100);
+			int tax2 = sal2 - (sal2 * 10/100);
+			
+			
+			EmployeesData myName1 = new EmployeesData(name1, name2);
+			EmployeesData myId1 = new EmployeesData(id1, id2);
+		
+			
+			
+			System.out.println("Name: "+ myName1.name1+ " ; " + " ID#: " + myId1.id1+ " ; " + " Salary: " +tax1 );
+			System.out.println("Name: "+ myName1.name2+ " ; " + " ID#: " + myId1.id2+ " ; " + " Salary: " +tax2 );
+			
+			scan.close();
+			
+		}
+		
+}
