@@ -1,1 +1,14 @@
 
+public class RevolutionPerMinute {
+	
+	public static void main(String args[]){
+	
+	int rpm = 3000;
+	int degrees = 0;
+	
+	degrees = (rpm * 360)/60;
+	
+	
+	System.out.println("A spinning tire rotates " +degrees+ " degrees in one second.");
+	
+}}
