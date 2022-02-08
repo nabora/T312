@@ -1,0 +1,57 @@
+package Part1;
+
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		StudentData data = new StudentData();
+		
+		Scanner scan = new Scanner(System.in);
+		
+		
+		System.out.println("[Input Personal Data]");
+		System.out.println("Full Name: ");
+		data.setName(scan.nextLine());
+		System.out.println("Phone Number: ");
+		data.setPhone(scan.nextLong());
+		scan.nextLine();
+		System.out.println("Address: ");
+		data.setAdd(scan.nextLine());
+		System.out.println("Age: ");
+		data.setAge(scan.nextInt());
+		System.out.println("\r[Input Grade]");
+		System.out.println("English Grade: ");
+		data.setEng_grade(scan.nextInt());
+		System.out.println("Filipino Grade: ");
+		data.setFil_grade(scan.nextInt());
+		System.out.println("Math Grade: ");
+		data.setMath_grade(scan.nextInt());
+		System.out.println("Science Grade: ");
+		data.setSci_grade(scan.nextInt());
+		System.out.println("MAPEH Grade: ");
+		data.setMapeh_grade(scan.nextInt());
+		
+		
+		
+		System.out.println("\r-Student Data-");
+	  System.out.println("Name: "+ data.getName());
+		System.out.println("Contact Number: "+ data.getPhone());
+		System.out.println("Address: "+ data.getAdd());
+		System.out.println("Age: "+ data.getAge());
+		System.out.println("\r-Student Grade-");
+		System.out.println("English Grade: "+ data.getEng_grade());
+		System.out.println("Filipino Grade: "+ data.getFil_grade());
+		System.out.println("Math Grade: "+ data.getMath_grade());
+		System.out.println("Science Grade: "+ data.getSci_grade());
+		System.out.println("MAPEH Grade: "+ data.getMapeh_grade());
+		
+		
+		scan.close();
+		
+	
+	}
+
+}
